@@ -4,6 +4,7 @@ import { onePhoneService } from "../services/phones.services";
 import { useParams } from "react-router-dom";
 
 import { Card } from "react-bootstrap";
+import { PuffLoader } from "react-spinners";
 
 
 //Images
@@ -89,5 +90,7 @@ export default function Phone() {
 
         <p style={{width:"500px"}}><b>Price:</b> {phone.price} $</p>
     </Card>
-  ) : (<h3>Loading...</h3>)
+  ) : (<div className="spinners">
+        <PuffLoader color="white" size={120} />
+    </div>)
 }

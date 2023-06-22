@@ -1,6 +1,9 @@
+//IMPORTS
 import { useEffect, useState } from "react"
 import { allPhonesService } from "../services/phones.services";
 import { Link } from "react-router-dom";
+import { PuffLoader } from "react-spinners";
+
 
 
 export default function AllPhones() {
@@ -29,5 +32,7 @@ export default function AllPhones() {
             ))}
         </div>
     </div>
-  ) : (<h3>Loading...</h3>)
+  ) : (<div className="spinners">
+        <PuffLoader color="white" size={120} />
+    </div>)
 }
